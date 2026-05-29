@@ -1,0 +1,85 @@
+@import url("https://fonts.cdnfonts.com/css/google-sans");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #101011;
+  --foreground: #ffffff;
+  --accent-red: #ff514d;
+  --accent-purple: #be63dd;
+  --accent-blue: #5792eb;
+  --accent-gold: #ffbc5e;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  min-height: 100%;
+  margin: 0;
+  background: var(--background);
+  color: var(--foreground);
+}
+
+body {
+  font-family: "Google Sans", "Product Sans", var(--font-space-grotesk), Inter, ui-sans-serif, system-ui, "Segoe UI", Arial, sans-serif;
+  text-rendering: geometricPrecision;
+}
+
+button,
+input,
+textarea {
+  font: inherit;
+}
+
+button {
+  -webkit-tap-highlight-color: transparent;
+}
+
+button:disabled {
+  cursor: wait;
+  opacity: 0.62;
+}
+
+::selection {
+  background-color: var(--accent-red);
+  color: #ffffff;
+}
+
+.phone-scroll {
+  scrollbar-width: none;
+  overscroll-behavior: contain;
+}
+
+.phone-scroll::-webkit-scrollbar {
+  display: none;
+}
+
+.stripe-fill {
+  background-image: repeating-linear-gradient(
+    105deg,
+    currentColor 0 2px,
+    transparent 2px 7px
+  );
+  background-color: transparent;
+}
+
+.material-symbols-rounded {
+  font-family: "Material Symbols Rounded";
+  font-weight: normal;
+  font-style: normal;
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  display: inline-block;
+  white-space: nowrap;
+  word-wrap: normal;
+  direction: ltr;
+  -webkit-font-feature-settings: "liga";
+  -webkit-font-smoothing: antialiased;
+  font-variation-settings: "FILL" 1, "wght" 500, "GRAD" 0, "opsz" 24;
+  user-select: none;
+}
